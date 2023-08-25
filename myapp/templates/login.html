@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Login Page{% endblock title %}
+
+{% block content %} 
+    
+
+
+
+ <div class="form">
+        <div class="container">
+            <h1>!!!!Login this page!!!!</h1>
+        <form onsubmit="return validform()" class="text" action="petcare.html">
+        USERNAME:= <input type="text" class="a" id="username"><br>
+        <p id="usererror" class="p"></p>
+        PASSWORD:= <input type="password" class="a" id="userpw"><br>
+        <p id="pwerror" class="p"></p>
+        <button type="button" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-light">
+             <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+        </button>
+        
+       
+        </form>
+        </div>
+    </div>
+    
+    <button class="btn btn-light">
+    <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+</button>
+
+{% endblock content %} 

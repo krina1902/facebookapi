@@ -1,0 +1,1 @@
+https://studygyaan.com/django/how-to-add-social-login-to-django#google_vignette
