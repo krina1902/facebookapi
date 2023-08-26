@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-ada5dgp&7*#f3jv0zd4u!o0&+e4p3m$@o*p$j(27_qfnr$2s1s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com','localhost']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django',
     'myapp',
-    # 'myapp',
+
 ]
 
 MIDDLEWARE = [
@@ -122,6 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -136,10 +137,7 @@ AUTHENTICATION_BACKENDS = (
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'login'
 
 SOCIAL_AUTH_FACEBOOK_KEY = '264801286491725'  # App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '88e6e033e74d8fa5c20b61f2f10eec86'
-
-SOCIAL_AUTH_FACEBOOK_SCOPE = [
-    'email',
-]
